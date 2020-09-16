@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+             </thead>
+             <tbody>
+                 <tr *ngFor="let s of d" [routerLink]="['/homes',s.userId]"> 
+                     <td>{{s.id}}</td>
+                     <td>{{s.name}}</td>
+                     <td>{{s.email}}</td>
+                     <td> 
+                         <p> city:{{s.address.city}}</p>
+                         <p> street:{{s.address.street}}</p>
+                     </td>
+                 </tr>
+             </tbody>
+</table>
